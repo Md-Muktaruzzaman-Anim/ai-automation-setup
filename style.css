@@ -1,0 +1,37 @@
+:root{--bg:#fff;--fg:#14171f;--mut:#5b6472;--line:#e3e6ec;--card:#f6f7f9;--acc:#0e7c66;--accfg:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1218;--fg:#eceff4;--mut:#9aa3b2;--line:#252b36;--card:#161b24;--acc:#34c3a0;--accfg:#06241d}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.75 "Hind Siliguri","Noto Sans Bengali",system-ui,sans-serif}
+.w{max-width:980px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}h1,h2,h3{line-height:1.35;margin:0 0 12px}
+h1{font-size:clamp(1.9rem,6vw,3rem)}h2{font-size:clamp(1.4rem,4vw,1.9rem)}
+p{margin:0 0 12px}.mut{color:var(--mut)}a{color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+nav{position:sticky;top:0;background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+nav .w{display:flex;justify-content:space-between;align-items:center;height:56px}
+nav b{font-weight:700}nav a{text-decoration:none;font-size:.95rem;margin-left:16px}
+.btn{display:inline-block;background:var(--acc);color:var(--accfg);padding:11px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:1px solid var(--acc)}
+.btn.ghost{background:transparent;color:var(--fg);border-color:var(--line)}
+.btn.off{opacity:.55;cursor:not-allowed}
+.lead{max-width:60ch;color:var(--mut);font-size:1.1rem}
+.hero{padding:72px 0 56px}.hero .note{max-width:60ch;margin-top:22px;padding-left:14px;border-left:3px solid var(--acc);color:var(--mut);font-size:.95rem}
+ul.pl{padding-left:20px;margin:0 0 16px}ul.pl li{margin-bottom:6px}
+.callout{font-weight:700;margin-top:18px}
+.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px;margin-top:20px}
+.tool{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:16px 8px;text-align:center;font-size:.9rem}
+.ic{display:block;width:28px;height:28px;margin:0 auto 8px;background:var(--fg);-webkit-mask:var(--i) center/contain no-repeat;mask:var(--i) center/contain no-repeat}
+.ic.t{background:none;-webkit-mask:none;mask:none;border:1.5px solid var(--fg);border-radius:6px;font:700 .7rem/25px system-ui;color:var(--fg)}
+figure{margin:20px 0 0;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+figure img{display:block;width:100%;height:auto}figcaption,#proof-missing{padding:14px 16px;font-size:.9rem;color:var(--mut)}
+.plans{display:grid;gap:16px;margin-top:20px}
+@media(min-width:800px){.plans{grid-template-columns:repeat(3,1fr);align-items:stretch}}
+.plan{border:1px solid var(--line);border-radius:12px;padding:24px;display:flex;flex-direction:column;background:var(--bg)}
+.plan.feat{border:2px solid var(--acc);background:var(--card)}
+.plan .pr{font-size:2rem;font-weight:700}.plan ul{padding-left:20px;flex:1}.plan .btn{text-align:center}
+.steps{padding-left:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding:8px 0 8px 40px;position:relative}
+.steps li:before{content:counter(s);position:absolute;left:0;top:8px;width:28px;height:28px;border-radius:50%;background:var(--acc);color:var(--accfg);text-align:center;line-height:28px;font-weight:700;font-size:.9rem}
+.warn{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 16px;font-weight:600}
+.row{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mut);font-size:.9rem}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
